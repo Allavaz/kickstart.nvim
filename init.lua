@@ -817,12 +817,15 @@ require('lazy').setup({
     end,
   },
 
+  -- Neat cli tool to do git stuff
   { 'kdheepak/lazygit.nvim', keys = {
     { '<leader>gg', '<cmd>LazyGit<cr>', desc = 'Lazy Git' },
   } },
 
+  -- Can't live without it!
   { 'github/copilot.vim' },
 
+  -- When I'm in a huge function, keep the function signature at the top of the window
   { 'nvim-treesitter/nvim-treesitter-context' },
 
   { -- Only show diagnostic text when I'm on that line
