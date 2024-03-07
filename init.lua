@@ -151,6 +151,9 @@ vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
+-- 120 char line
+vim.opt.colorcolumn = '120'
+
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
@@ -613,6 +616,7 @@ require('lazy').setup({
         lsp_fallback = true,
       },
       formatters_by_ft = {
+        ['*'] = { 'trim_whitespace' },
         lua = { 'stylua' },
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
@@ -800,6 +804,12 @@ require('lazy').setup({
       --    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
     end,
   },
+
+  { 'kdheepak/lazygit.nvim', keys = {
+    { '<leader>gg', '<cmd>LazyGit<cr>', desc = 'Lazy Git' },
+  } },
+
+  { 'github/copilot.vim' },
 
   -- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
   -- init.lua. If you want these files, they are in the repository, so you can just download them and
